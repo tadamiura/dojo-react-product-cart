@@ -1,5 +1,7 @@
 import React from 'react';
+import Tableau from './Tableau'
 import './App.css';
+
 
 const initialProductList = [
   { id: 1, name: 'produit 1', price: 50, quantity: 1 },
@@ -11,6 +13,7 @@ function App () {
   return (
     <div className='App'>
       <h1>Ma commande</h1>
+      <Tableau initialProductList = {initialProductList}/>
     </div>
   );
 }
