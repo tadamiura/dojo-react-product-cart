@@ -27,6 +27,19 @@ const Tableau = (props) => {
     )
   }
   const op = (a,b) => a * b
+
+  getTotal() {
+    const total = productList.reduce((acc, product) => acc + (product.quantity * product.price), 0)
+    return total
+  }
+
+  
+
+
+
+  // const bill = initialProductList.reduce(function(sum, order){
+  //   return sum + order.{item.price * item.quantity}
+  // },0)
   
   return (
         <div>
@@ -47,10 +60,12 @@ const Tableau = (props) => {
               )              
             }
           </table>
-          <p>Montant total: {productList.reduce(function(a,b){
+          <p>Montant total: {getTotal}
+            {/* {bill} */}
+            {/* {productList.reduce(function(a,b){
               return (a.quantity * a.quantity)
           }
-          )}      
+          )}       */}
           </p> 
         </div>
     )
